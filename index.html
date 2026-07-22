@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portal Unificado - Manage-M & Maintenix</title>
+
+<style>
+
+:root{
+    --verde:#86BC25;
+    --azul:#1B2A41;
+    --gris:#F5F7F8;
+    --texto:#2F3A45;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+}
+
+body{
+    background:var(--gris);
+    color:var(--texto);
+}
+
+/* ---------------- HERO ---------------- */
+
+.hero{
+    background:linear-gradient(135deg,#172537,#1F3149);
+    color:white;
+    min-height:500px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    width:12px;
+    height:100%;
+    background:var(--verde);
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.logo{
+    padding-top:30px;
+    font-size:38px;
+    font-weight:700;
+}
+
+.logo span{
+    color:var(--verde);
+}
+
+.subtitle{
+    margin-top:40px;
+    color:#d7dce0;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.hero h1{
+    margin-top:20px;
+    font-size:55px;
+    max-width:900px;
+    line-height:1.1;
+}
+
+.hero p{
+    margin-top:25px;
+    max-width:700px;
+    font-size:20px;
+    line-height:1.6;
+    color:#dfe6ea;
+}
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+}
+
+.c1{
+    width:220px;
+    height:220px;
+    right:70px;
+    bottom:90px;
+}
+
+.c2{
+    width:80px;
+    height:80px;
+    right:180px;
+    bottom:40px;
+}
+
+.green-dot{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:var(--verde);
+    position:absolute;
+    right:145px;
+    bottom:185px;
+}
+
+/* ---------------- KPI ---------------- */
+
+.kpis{
+    margin-top:-70px;
+    position:relative;
+    z-index:10;
+}
+
+.kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.kpi{
+    background:white;
+    border-radius:12px;
+    padding:30px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.kpi h2{
+    color:var(--verde);
+    font-size:36px;
+}
+
+.kpi span{
+    display:block;
+    margin-top:10px;
+    color:#666;
+}
+
+/* ---------------- FLOW ---------------- */
+
+.section{
+    padding:80px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    margin-bottom:50px;
+    color:var(--azul);
+}
+
+.flow{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:white;
+    width:220px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.number{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--verde);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.arrow{
+    font-size:45px;
+    color:var(--verde);
+}
+
+/* BENEFICIOS */
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-left:8px solid var(--verde);
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:var(--azul);
+}
+
+/* IMPACTO */
+
+.impact{
+    background:linear-gradient(135deg,#86BC25,#9BD530);
+    color:white;
+    border-radius:20px;
+    padding:50px;
+    text-align:center;
+}
+
+.impact h2{
+    font-size:50px;
+}
+
+.impact p{
+    margin-top:20px;
+    font-size:22px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#172537;
+    color:white;
+    text-align:center;
+    padding:30px;
+    margin-top:70px;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="logo">
+            Deloitte<span>.</span>
+        </div>
+
+        <div class="subtitle">
+            PORTAL UNIFICADO | DOCUMENTO OPERATIVO
+        </div>
+
+        <h1>
+            Proceso Automatizado de Gestión de Órdenes de Reparación
+            entre Manage-M y Maintenix
+        </h1>
+
+        <p>
+            Automatización integral para la gestión de órdenes asociadas
+            a Lufthansa Technik, reduciendo trabajo manual, mejorando la
+            trazabilidad y eliminando errores de digitación.
+        </p>
+
+    </div>
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="green-dot"></div>
+
+</section>
+
+<section class="kpis">
+
+<div class="container">
+
+<div class="kpi-grid">
+
+<div class="kpi">
+<h2>50</h2>
+<span>Órdenes procesadas por lote</span>
+</div>
+
+<div class="kpi">
+<h2>5h → 1.5h</h2>
+<span>Reducción de tiempo operativo</span>
+</div>
+
+<div class="kpi">
+<h2>100%</h2>
+<span>Trazabilidad mediante LHT_REFERENCE</span>
+</div>
+
+<div class="kpi">
+<h2>0</h2>
+<span>Digitación repetitiva manual</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Flujo Operacional
+</h2>
+
+<div class="flow">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Excel</h3>
+<p>Carga de órdenes de reparación.</p>
+</div>
+
+<div class="arrow">➜</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Manage-M</h3>
+<p>Obtención automática de referencia LHT.</p>
+</div>
+
+<div class="arrow">➜</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Maintenix</h3>
+<p>Actualización y validación de la orden.</p>
+</div>
+
+<div class="arrow">➜</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Emisión</h3>
+<p>Orden lista para aprobación y ejecución.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Beneficios del Portal
+</h2>
+
+<div class="benefits">
+
+<div class="card">
+<h3>Ahorro Operacional</h3>
+<p>
+Un lote de 50 órdenes pasa de aproximadamente
+5 horas manuales a menos de 1.5 horas
+desatendidas.
+</p>
+</div>
+
+<div class="card">
+<h3>Trazabilidad Completa</h3>
+<p>
+Cada reparación queda asociada
+a su referencia LHT_REFERENCE,
+permitiendo auditoría posterior.
+</p>
+</div>
+
+<div class="card">
+<h3>Reducción de Errores</h3>
+<p>
+Elimina errores de digitación,
+copia manual y reprocesos.
+</p>
+</div>
+
+<div class="card">
+<h3>Estandarización</h3>
+<p>
+Todas las órdenes siguen exactamente
+el mismo proceso operacional.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="impact">
+
+<h2>70%+</h2>
+
+<p>
+Reducción estimada del esfuerzo operativo
+en la gestión de órdenes de reparación.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<strong>Deloitte | Julio 2026</strong><br>
+Portal Unificado Manage-M & Maintenix<br>
+Autor: Pablo Olmos
+
+</footer>
+
+</body>
+</html>
