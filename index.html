@@ -29,6 +29,7 @@ body{
     color:var(--texto);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
 }
 
 .container{
@@ -42,13 +43,11 @@ body{
 /* ================================================= */
 
 .hero{
-
     background:linear-gradient(135deg,#162334,#21344B);
     min-height:650px;
     position:relative;
     overflow:hidden;
     color:white;
-
 }
 
 .hero::before{
@@ -62,7 +61,6 @@ body{
 }
 
 .logo{
-
     padding-top:35px;
     font-size:42px;
     font-weight:700;
@@ -73,7 +71,6 @@ body{
 }
 
 .hero-subtitle{
-
     margin-top:70px;
     color:#D6DFE4;
     letter-spacing:1px;
@@ -82,7 +79,6 @@ body{
 }
 
 .hero h1{
-
     margin-top:20px;
     max-width:900px;
     font-size:clamp(30px,5vw,60px);
@@ -90,7 +86,6 @@ body{
 }
 
 .hero p{
-
     margin-top:25px;
     max-width:800px;
     color:#E2E8EB;
@@ -98,46 +93,37 @@ body{
 }
 
 .hero-line{
-
     width:100%;
     height:4px;
     background:var(--verde);
     margin-top:40px;
 }
 
-/* DECORACION */
-
 .circle1{
-
     width:220px;
     height:220px;
     border-radius:50%;
     background:rgba(255,255,255,.05);
-
     position:absolute;
     right:60px;
     top:190px;
 }
 
 .circle2{
-
     width:90px;
     height:90px;
     border-radius:50%;
     background:rgba(255,255,255,.08);
-
     position:absolute;
     right:140px;
     top:330px;
 }
 
 .circle3{
-
     width:28px;
     height:28px;
     border-radius:50%;
     background:var(--verde);
-
     position:absolute;
     right:120px;
     top:288px;
@@ -148,21 +134,18 @@ body{
 /* ================================================= */
 
 .kpis{
-
     margin-top:-80px;
     position:relative;
     z-index:5;
 }
 
 .kpi-grid{
-
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
 .kpi{
-
     background:white;
     padding:30px;
     border-radius:16px;
@@ -170,13 +153,11 @@ body{
 }
 
 .kpi h2{
-
     color:var(--verde);
-    font-size:40px;
+    font-size:clamp(28px,4vw,40px);
 }
 
 .kpi p{
-
     margin-top:10px;
 }
 
@@ -185,16 +166,21 @@ body{
 /* ================================================= */
 
 .section{
-
     padding:90px 0;
 }
 
 .section-title{
-
     text-align:center;
     font-size:clamp(28px,4vw,42px);
     color:var(--azul);
-    margin-bottom:60px;
+    margin-bottom:20px;
+}
+
+.section-intro{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 55px auto;
+    font-size:clamp(15px,2vw,18px);
 }
 
 /* ================================================= */
@@ -202,45 +188,42 @@ body{
 /* ================================================= */
 
 .flow{
-
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
+    gap:30px;
 }
 
 .step{
-
     background:white;
-    width:220px;
-    padding:25px;
+    width:260px;
+    padding:30px 25px;
     border-radius:16px;
     text-align:center;
     box-shadow:0 5px 16px rgba(0,0,0,.08);
 }
 
 .number{
-
     width:55px;
     height:55px;
-
     border-radius:50%;
     background:var(--verde);
-
     color:white;
-
     display:flex;
     align-items:center;
     justify-content:center;
-
     margin:auto;
     margin-bottom:15px;
-
     font-weight:bold;
     font-size:22px;
 }
 
-.arrow{
+.step h3{
+    color:var(--azul);
+    margin-bottom:8px;
+}
 
+.arrow{
     font-size:38px;
     color:var(--verde);
 }
@@ -250,27 +233,72 @@ body{
 /* ================================================= */
 
 .benefits{
-
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:25px;
 }
 
 .card{
-
     background:white;
     padding:30px;
     border-left:8px solid var(--verde);
-
     border-radius:14px;
-
     box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 .card h3{
-
     margin-bottom:15px;
     color:var(--azul);
+}
+
+/* ================================================= */
+/* CALCULO DESTACADO */
+/* ================================================= */
+
+.calc{
+    background:white;
+    border-radius:20px;
+    padding:50px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border-top:6px solid var(--verde);
+}
+
+.calc-grid{
+    display:grid;
+    grid-template-columns:1fr auto 1fr auto 1fr;
+    align-items:center;
+    gap:20px;
+    text-align:center;
+}
+
+.calc-box h3{
+    color:var(--azul);
+    font-size:18px;
+    margin-bottom:12px;
+}
+
+.calc-box .big{
+    font-size:clamp(30px,4vw,44px);
+    font-weight:700;
+    color:var(--texto);
+}
+
+.calc-box.saving .big{
+    color:var(--verde);
+}
+
+.calc-op{
+    font-size:40px;
+    color:var(--verde);
+    font-weight:700;
+}
+
+.calc-note{
+    margin-top:30px;
+    text-align:center;
+    font-size:14px;
+    color:#6A7883;
+    font-style:italic;
 }
 
 /* ================================================= */
@@ -278,27 +306,25 @@ body{
 /* ================================================= */
 
 .impact{
-
     background:linear-gradient(135deg,#86BC25,#99D230);
-
     color:white;
-
     text-align:center;
-
-    padding:50px;
-
+    padding:55px;
     border-radius:24px;
 }
 
 .impact h2{
-
-    font-size:60px;
+    font-size:clamp(30px,5vw,50px);
+    max-width:850px;
+    margin:auto;
 }
 
 .impact p{
-
-    font-size:22px;
-    margin-top:15px;
+    font-size:clamp(17px,2vw,22px);
+    margin-top:20px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* ================================================= */
@@ -306,14 +332,12 @@ body{
 /* ================================================= */
 
 .timeline{
-
     position:relative;
     max-width:1000px;
     margin:auto;
 }
 
 .timeline::before{
-
     content:"";
     position:absolute;
     width:4px;
@@ -324,17 +348,20 @@ body{
 }
 
 .event{
-
     width:50%;
     padding:30px;
 }
 
 .event .content{
-
     background:white;
     padding:25px;
     border-radius:12px;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.event h3{
+    color:var(--azul);
+    margin-bottom:8px;
 }
 
 .left{
@@ -351,14 +378,19 @@ body{
 /* ================================================= */
 
 .footer{
-
     background:#162334;
-
     color:white;
-
     text-align:center;
-
     padding:40px;
+}
+
+.footer h3 .dot{
+    color:var(--verde);
+}
+
+.footer p{
+    margin-top:8px;
+    color:#C9D2D8;
 }
 
 /* ================================================= */
@@ -377,12 +409,19 @@ body{
 
 .flow{
     flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
 }
 
 .arrow{
     display:none;
+}
+
+.calc-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.calc-op{
+    transform:rotate(90deg);
 }
 
 .timeline::before{
@@ -425,16 +464,24 @@ body{
     grid-template-columns:1fr;
 }
 
+.kpi{
+    text-align:center;
+}
+
 .step{
     width:100%;
 }
 
-.impact h2{
-    font-size:40px;
+.section{
+    padding:55px 0;
 }
 
-.impact p{
-    font-size:18px;
+.calc{
+    padding:30px;
+}
+
+.impact{
+    padding:35px;
 }
 
 }
@@ -461,7 +508,7 @@ Proceso Automatizado de Gestión de Órdenes de Reparación entre Manage-M y Mai
 </h1>
 
 <p>
-Automatización integral para la gestión de órdenes de reparación asociadas a Lufthansa Technik, reduciendo tiempos operativos, errores manuales y mejorando la trazabilidad.
+Automatización integral para la gestión de Purchase Orders de reparación asociadas a Lufthansa Technik, reduciendo tiempos operativos, errores manuales y mejorando la trazabilidad.
 </p>
 
 <div class="hero-line"></div>
@@ -481,23 +528,23 @@ Automatización integral para la gestión de órdenes de reparación asociadas a
 <div class="kpi-grid">
 
 <div class="kpi">
-<h2>50</h2>
-<p>Órdenes por lote</p>
+<h2>50 PO</h2>
+<p>Purchase Orders por ejecución</p>
 </div>
 
 <div class="kpi">
-<h2>5h ➜ 1.5h</h2>
-<p>Reducción de tiempo operativo</p>
+<h2>5h</h2>
+<p>Tiempo manual estimado</p>
 </div>
 
 <div class="kpi">
-<h2>100%</h2>
-<p>Trazabilidad mediante LHT_REFERENCE</p>
+<h2>1.5h</h2>
+<p>Tiempo automatizado supervisado</p>
 </div>
 
 <div class="kpi">
 <h2>70%</h2>
-<p>Reducción estimada de esfuerzo operativo</p>
+<p>Reducción estimada del esfuerzo operativo</p>
 </div>
 
 </div>
@@ -511,39 +558,83 @@ Automatización integral para la gestión de órdenes de reparación asociadas a
 <div class="container">
 
 <h2 class="section-title">
-Flujo Operacional
+Visión General de la Solución
 </h2>
+
+<p class="section-intro">
+La solución transforma un proceso manual y repetitivo en una ejecución automatizada, estandarizada y completamente trazable.
+</p>
 
 <div class="flow">
 
 <div class="step">
 <div class="number">1</div>
-<h3>Excel</h3>
-<p>Ingreso inicial de órdenes.</p>
+<h3>Datos de Entrada</h3>
+<p>Ingreso de Purchase Orders desde un archivo Excel estructurado.</p>
 </div>
 
 <div class="arrow">➜</div>
 
 <div class="step">
 <div class="number">2</div>
-<h3>Manage-M</h3>
-<p>Obtención automática de referencia LHT.</p>
+<h3>Procesamiento Automatizado</h3>
+<p>Interacción directa con Manage-M y Maintenix, sin intervención manual.</p>
 </div>
 
 <div class="arrow">➜</div>
 
 <div class="step">
 <div class="number">3</div>
-<h3>Maintenix</h3>
-<p>Actualización integral de la orden.</p>
+<h3>Resultado Trazable</h3>
+<p>Orden emitida y registrada mediante LHT_REFERENCE y log de actividad.</p>
 </div>
 
-<div class="arrow">➜</div>
+</div>
 
-<div class="step">
-<div class="number">4</div>
-<h3>Emisión</h3>
-<p>Orden lista para autorización.</p>
+</div>
+
+</section>
+
+<section class="section" style="background:#ffffff;">
+
+<div class="container">
+
+<h2 class="section-title">
+¿Por qué no es una macro tradicional?
+</h2>
+
+<p class="section-intro">
+Esta solución no automatiza clics: automatiza procesos.
+</p>
+
+<div class="benefits">
+
+<div class="card">
+<h3>Automatización Empresarial</h3>
+<p>
+A diferencia de macros tradicionales que dependen de movimientos del mouse y posiciones en pantalla, esta solución interactúa directamente con los elementos y estructuras internas de cada aplicación.
+</p>
+</div>
+
+<div class="card">
+<h3>Ejecución en Segundo Plano</h3>
+<p>
+El procesamiento continúa sin requerir interacción constante del usuario, evitando bloqueos de pantalla y permitiendo realizar otras actividades durante la ejecución.
+</p>
+</div>
+
+<div class="card">
+<h3>Mayor Estabilidad</h3>
+<p>
+Al identificar elementos específicos de cada aplicación, se reducen los errores provocados por cambios de resolución, movimientos del usuario o interferencias en pantalla.
+</p>
+</div>
+
+<div class="card">
+<h3>Escalabilidad</h3>
+<p>
+El mismo framework puede reutilizarse para futuras automatizaciones dentro de Supply Chain, Engineering y Maintenance.
+</p>
 </div>
 
 </div>
@@ -553,6 +644,52 @@ Flujo Operacional
 </section>
 
 <section class="section">
+
+<div class="container">
+
+<h2 class="section-title">
+Ahorro Operacional
+</h2>
+
+<div class="calc">
+
+<div class="calc-grid">
+
+<div class="calc-box">
+<h3>Proceso Manual</h3>
+<div class="big">5h</div>
+<p>50 PO × ~5-6 min</p>
+</div>
+
+<div class="calc-op">➜</div>
+
+<div class="calc-box">
+<h3>Proceso Automatizado</h3>
+<div class="big">1h 30m</div>
+<p>Ejecución supervisada</p>
+</div>
+
+<div class="calc-op">=</div>
+
+<div class="calc-box saving">
+<h3>Ahorro por Ejecución</h3>
+<div class="big">3h 30m</div>
+<p>≈ 70% menos esfuerzo</p>
+</div>
+
+</div>
+
+<p class="calc-note">
+Escenario calculado en las mejores condiciones: conectividad estable, sin errores ni reprocesos. El beneficio real suele ser mayor, ya que la automatización elimina errores de digitación, omisiones y retrabajos propios del proceso manual.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section" style="background:#ffffff;">
 
 <div class="container">
 
@@ -565,48 +702,30 @@ Beneficios del Portal
 <div class="card">
 <h3>Ahorro Operacional</h3>
 <p>
-Un lote de 50 órdenes de reparación pasa de aproximadamente 5 horas de trabajo manual a menos de 1.5 horas desatendidas.
+Considerando un tiempo promedio de aproximadamente 5 minutos por Purchase Order, una ejecución de 50 PO requiere cerca de 5 horas de trabajo manual. La automatización reduce este esfuerzo a aproximadamente 1.5 horas supervisadas, liberando capacidad para actividades de mayor valor.
 </p>
 </div>
 
 <div class="card">
-<h3>Trazabilidad</h3>
+<h3>Trazabilidad y Auditoría</h3>
 <p>
-Todas las transacciones quedan asociadas mediante LHT_REFERENCE y el log de actividad.
+Cada transacción queda registrada mediante la referencia LHT_REFERENCE y el log de actividad, permitiendo reconstruir completamente el ciclo de procesamiento de cada Purchase Order.
 </p>
 </div>
 
 <div class="card">
 <h3>Reducción de Errores</h3>
 <p>
-Disminuye errores de digitación, reprocesos y diferencias operativas.
+Al interactuar directamente con el código de cada aplicación, se eliminan errores de digitación, omisiones y reprocesos asociados al trabajo manual.
 </p>
 </div>
 
 <div class="card">
 <h3>Estandarización</h3>
 <p>
-Todas las órdenes siguen exactamente el mismo flujo operacional.
+Todas las Purchase Orders se procesan bajo las mismas reglas de negocio, garantizando consistencia y calidad de la información.
 </p>
 </div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="container">
-
-<div class="impact">
-
-<h2>ROI OPERACIONAL</h2>
-
-<p>
-Reducción superior al 70% del tiempo operativo mediante automatización.
-</p>
 
 </div>
 
@@ -627,7 +746,7 @@ Trazabilidad del Proceso
 <div class="event left">
 <div class="content">
 <h3>Carga de Datos</h3>
-<p>Recepción de órdenes desde Excel estructurado.</p>
+<p>Recepción de Purchase Orders desde Excel estructurado.</p>
 </div>
 </div>
 
@@ -641,14 +760,14 @@ Trazabilidad del Proceso
 <div class="event left">
 <div class="content">
 <h3>Actualización MXI</h3>
-<p>Registro de información y reglas de negocio.</p>
+<p>Registro de información y aplicación de reglas de negocio.</p>
 </div>
 </div>
 
 <div class="event right">
 <div class="content">
 <h3>Auditoría</h3>
-<p>Trazabilidad garantizada mediante LHT_REFERENCE y log.</p>
+<p>Trazabilidad garantizada mediante LHT_REFERENCE y log de actividad.</p>
 </div>
 </div>
 
@@ -658,17 +777,33 @@ Trazabilidad del Proceso
 
 </section>
 
+<section class="section" style="padding-top:0;">
+
+<div class="container">
+
+<div class="impact">
+
+<h2>
+Más tiempo para analizar, menos tiempo para digitar.
+</h2>
+
+<p>
+La automatización transforma un proceso operativo manual en una capacidad escalable, controlada y completamente trazable.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
 <footer class="footer">
 
-<h3>Deloitte.</h3>
+<h3>Deloitte<span class="dot">.</span></h3>
 
-<p>
-Portal Unificado Manage-M & Maintenix
-</p>
+<p>Portal Unificado Manage-M & Maintenix</p>
 
-<p>
-Autor: Pablo Olmos | Julio 2026
-</p>
+<p>Autor: Pablo Olmos | Julio 2026</p>
 
 </footer>
 
